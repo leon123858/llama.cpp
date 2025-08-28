@@ -125,7 +125,7 @@ llama_test(test-tokenizer-0 NAME test-tokenizer-0-qwen2             ARGS ${PROJE
 llama_test(test-tokenizer-0 NAME test-tokenizer-0-refact            ARGS ${PROJECT_SOURCE_DIR}/models/ggml-vocab-refact.gguf)
 llama_test(test-tokenizer-0 NAME test-tokenizer-0-starcoder         ARGS ${PROJECT_SOURCE_DIR}/models/ggml-vocab-starcoder.gguf)
 
-if (NOT WIN32)
+if (NOT WIN32 AND NOT EXISTS "/.dockerenv")
     llama_test_cmd(
         ${CMAKE_CURRENT_SOURCE_DIR}/test-tokenizers-repo.sh
         NAME test-tokenizers-ggml-vocabs
