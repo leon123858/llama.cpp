@@ -31,6 +31,8 @@ RUN git clone --recurse-submodules $REPO_URL $REPO_NAME
 
 # 設定工作目錄到專案中
 WORKDIR /workspace/$REPO_NAME
+RUN git checkout $REPO_BRANCH
+RUN git pull
 
 # compile
 RUN cmake -B build -DCMAKE_BUILD_TYPE=Debug

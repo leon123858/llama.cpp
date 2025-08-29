@@ -16,6 +16,8 @@ put model `gemma-2b.gguf` in the `C:\Users\a0970\Desktop\models` (for example) d
 ```bash
 # inside the docker container run the following command to quick start
 build/bin/llama-cli -m /models/gemma-2b.gguf -p "I believe the meaning of life is" -n 128 -no-cnv
+# or use the model from huggingface directly, it may cache the model in local
+build/bin/llama-cli --hf-repo Leths/gpt2-Q4_K_M-GGUF --hf-file gpt2-q4_k_m.gguf -p "The meaning to life and the universe is"
 # start unit test
 ctest --test-dir build --output-on-failure -j8
 ```
