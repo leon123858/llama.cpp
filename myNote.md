@@ -8,10 +8,10 @@ docker build -t llama .
 # run the docker image
 docker run --name llama -it llama
 # run the docker image and mount a model directory
-docker run --name llama -v C:\\Users\\a0970\\Desktop\\models:/models -it llama
+docker run --name llama -v ./models:/models -it llama
 ```
 
-put model `gemma-2b.gguf` in the `C:\Users\a0970\Desktop\models` (for example) directory
+put model `gemma-2b.gguf` in the `./models` (for example) directory
 
 ```bash
 # inside the docker container run the following command to quick start
