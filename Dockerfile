@@ -1,5 +1,5 @@
 # 使用 Ubuntu 22.04 作為基礎映像
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 # 設定環境變數，避免互動式提示
 ENV DEBIAN_FRONTEND=noninteractive

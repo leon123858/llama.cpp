@@ -21,3 +21,5 @@ build/bin/llama-cli --hf-repo Leths/gpt2-Q4_K_M-GGUF --hf-file gpt2-q4_k_m.gguf 
 # start unit test
 ctest --test-dir build --output-on-failure -j8
 ```
+
+build your code by `cmake --build build`
