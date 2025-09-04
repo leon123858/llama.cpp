@@ -24,3 +24,32 @@ ctest --test-dir build --output-on-failure -j8
 
 - build your code by `cmake --build build`
 - format your code by `clang-format -i -style=file src/<file>`
+
+## debug
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/bin/llama-translater", // 這裡填入您的可執行檔路徑和名稱
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+        }
+    ]
+}
+```
